@@ -36,7 +36,7 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
-    public void ShowInfo(){
+    public  void ShowInfo(){
         System.out.println("Name: "+name);
         System.out.println("email: "+email);
         System.out.println("Age: "+age);

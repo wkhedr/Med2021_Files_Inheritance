@@ -1,19 +1,37 @@
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        Person p = new Person("name1","name1@email.com", 22);
-        p.ShowInfo();
+//        Person p = new Person("name1","name1@email.com", 22);
+//        p.ShowInfo();
 
-        Student s = new Student("name2","name2@email.com", 33,3.5,123);
+
+
+        Person s = new Student("name2","name2@email.com", 33,3.5,123);
+        Person t = new Teacher("Teacher 1","teacher1@email.com",44,"IT",5);
+        ArrayList<Person> persons = new ArrayList<>();
+        persons.add(s);
+        persons.add(t);
+       for(Person p : persons){
+           p.ShowInfo();
+       }
+        for (int i = 0; i < persons.size(); i++) {
+            persons.get(i).ShowInfo();
+
+        }
+
+
+
+
 //        s.setName("name2");
 //        s.setEmail("name2@email.com");
 //        s.setAge(33);
         //s.ShowInfo();
-        System.out.println(s);
+   //     System.out.println(s);
 
 
         /*try {
@@ -41,4 +59,6 @@ public class Main {
 
         // write your code here
     }
+
+
 }
